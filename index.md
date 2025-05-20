@@ -7,4 +7,12 @@ title: home
 
 Welcome to my personal site - **created with care** 
 
-Check out my [blog posts](./_posts)
+# Blog Posts
+
+Check out my blog posts:
+
+<ul>
+  {% for post in site.posts  %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a> - {{ post.date | date: "%Y-%m-%d" }}</li>
+  {% endfor %}
+</ul>
